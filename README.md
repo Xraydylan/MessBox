@@ -107,12 +107,28 @@ Wenn die Werte durch Termianlargumente geändert werden sollen,
 benutze folgende Schreibweise beim Start des Programms:
 
 ```shell
-python Messbox.py port=COM3 name=Messung interval=20 plot=False
+python MessBox.py port=COM3 name=Messung interval=20 plot=False
 ```
 oder
 ```shell
-py -3 Messbox.py port=COM3 name=Messung interval=20 plot=False
+py -3 MessBox.py port=COM3 name=Messung interval=20 plot=False
 ```
+
+## Anderer COM Port
+Um bei den Programmen `Port_tester.py` und `MessBox.py` einen anderen Port anzugeben, 
+ändere die Port Variable im Programm oder gebe den neuen Port als durch Termianlargument an.
+	
+Wenn die Werte durch Termianlargumente geändert werden sollen, 
+benutze folgende Schreibweise beim Start des Programms:
+Bei `Port_tester.py`:
+```shell
+python Port_tester.py COM3
+```
+Bei `Messbox.py`:
+```shell
+python Messbox.py port=COM3
+```
+
 ## License
 Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
 ***
