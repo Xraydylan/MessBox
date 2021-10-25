@@ -7,7 +7,7 @@ MessBox für den Kreiselversuch des P1 Praktikums
 - [Installation](#Installation)
 - [Vorbereitung](#Vorbereitung)
 - [Messung](#Messung)
-- [Anderer COM Port](#Anderer%COM%Port)
+- [Anderer COM Port](#Anderer-COM-Port)
 - [License](#License)
 
 
