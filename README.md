@@ -124,9 +124,9 @@ Bei `Port_tester.py`:
 ```shell
 python Port_tester.py COM3
 ```
-Bei `Messbox.py`:
+Bei `MessBox.py`:
 ```shell
-python Messbox.py port=COM3
+python MessBox.py port=COM3
 ```
 
 ## License
