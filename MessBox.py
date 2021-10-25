@@ -214,7 +214,12 @@ def save(data, name):
     tmp = "Time,Frequency\n(s),(1/s)\n"
     for d in data:
         tmp += str(d[0]) + ", " + str(d[1]) + "\n"
-    path = "out/"+ name + ".csv"
+
+    path = "out/"
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    path = "out/" + name + ".csv"
     with open(path, "w") as f:
         f.write(tmp)
     # print("Saved data as %s" % (name))
