@@ -17,7 +17,8 @@ Dies ist die Anleitung zur MessBox, welche den Versuchsteil "4. Die Dämpfung de
 beim Versuch "Kreisel" erleichtern soll.
 Konkret übernimmt die Messbox bei richtiger Benutzung die Messwertaufzeichnung des Versuches.
 
-Drehzahlwerte werden als csv Datei gespeicher und es wird ein Plot erstellt.
+Drehzahlwerte werden als .csv Datei gespeicher und es wird ein Plot erstellt.
+Der Output Ordner "out", in welchen die generierte .csv Datei gespeichert wird, wird automatisch erstellt.
 
 ## Installation
 
