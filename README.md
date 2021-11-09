@@ -31,7 +31,6 @@ Optional sollte `matplotlib` installiert werden, um den Plot anzuzeigen
 
 Empfohlen wird Windows als Betriebssystem.
 Bei Linus müssen das Paket `pyserial` extra installiert werden und der default COM port geändert werden.
-Es gibt keine Garantie für Mac nutzer.
 
 
 Idealerweise muss `pyserial` unter Windows nicht extra installiert werden, da dieses dem Programm im Ordner "packages" beiliegen.
