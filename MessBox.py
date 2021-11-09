@@ -1,13 +1,17 @@
+# coding: utf-8
+
 import sys
 import os
-base_path = os.path.dirname(os.path.abspath(__file__)) + "\\packages\\site-packages"
-sys.path.insert(0, base_path)
-
+base_path = os.path.dirname(os.path.abspath(__file__))
+serial_path = base_path + "\packages\site-packages"
+sys.path.insert(0, serial_path)
 import serial
 import time
 from datetime import datetime
+
 try:
     import matplotlib.pyplot as plt
+
     mat_not_imported = False
 except:
     print("================================")
@@ -25,7 +29,6 @@ total = 60 * 35
 
 cutoff = True
 max_cutoff = 20
-
 
 plot = True
 micros = True
@@ -49,6 +52,7 @@ defaults = {
     "max_cutoff": max_cutoff}
 
 ser = None
+
 
 def setup():
     global ser, defaults
@@ -79,6 +83,7 @@ def setup():
     except:
         raise Exception("Couldn´t find device.")
     time.sleep(2)
+
 
 def main():
     setup()
@@ -150,7 +155,7 @@ def run(live_save=False, name="data"):
                 if len(buffer) == b_len:
                     buffer.pop(0)
                     buffer.append(f)
-                    freq = sum(buffer)/b_len
+                    freq = sum(buffer) / b_len
                 else:
                     if len(buffer) > b_len:
                         print("Buffer Error")
@@ -172,7 +177,7 @@ def run(live_save=False, name="data"):
                 save(dataout, name)
         if check_time(T1, total):
             print("")
-            #print(dataout)
+            # print(dataout)
             break
     return dataout
 
@@ -215,11 +220,11 @@ def save(data, name):
     for d in data:
         tmp += str(d[0]) + ", " + str(d[1]) + "\n"
 
-    path = "out/"
+    path = base_path + "/out/"
     if not os.path.exists(path):
         os.makedirs(path)
 
-    path = "out/" + name + ".csv"
+    path = base_path + "/out/" + name + ".csv"
     with open(path, "w") as f:
         f.write(tmp)
     # print("Saved data as %s" % (name))

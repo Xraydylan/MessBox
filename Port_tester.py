@@ -1,7 +1,10 @@
+# coding: utf-8
+
 import sys
 import os
-base_path = os.path.dirname(os.path.abspath(__file__)) + "\\packages\\site-packages"
-sys.path.insert(0, base_path)
+base_path = os.path.dirname(os.path.abspath(__file__))
+serial_path = base_path + "\packages\site-packages"
+sys.path.insert(0, serial_path)
 import serial
 import time
 
